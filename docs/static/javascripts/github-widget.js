@@ -3,8 +3,6 @@ Copyright (c) 2011 - 2012 George MacKerron
 https://github.com/jawj/github-widget
 Released under the MIT licence: http://opensource.org/licenses/mit-license
 
-Edited by Tony Zhao (2018)
-Note: Slight edit to check if repo.language is "Jupyer Notebook"
  */
 
 (function() {
@@ -31,7 +29,7 @@ Note: Slight edit to check if repo.language is "Jupyer Notebook"
     results = [];
     for (j = 0, len = ref.length; j < len; j++) {
       repo = ref[j];
-      if ((!opts.forks && repo.fork) || (ref1 = repo.name.toLowerCase(), indexOf.call(siteRepoNames, ref1) >= 0) || !repo.description) {
+      if ((ref1 = repo.name.toLowerCase(), indexOf.call(siteRepoNames, ref1) >= 0)) {
         continue;
       }
       if (made++ === limit) {
